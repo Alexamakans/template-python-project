@@ -107,7 +107,7 @@ fi
 # Exclude common dirs
 is_excluded() {
   case "$1" in
-    .git/*|.git|.direnv/*|.direnv|.venv/*|.venv|.uv/*|.uv|dist/*|dist|build/*|build|result/*|result|__pycache__/*|__pycache__|node_modules/*|node_modules )
+    rename.sh|.git/*|.git|.direnv/*|.direnv|.venv/*|.venv|.uv/*|.uv|dist/*|dist|build/*|build|result/*|result|__pycache__/*|__pycache__|node_modules/*|node_modules )
       return 0 ;;
     *)
       return 1 ;;
