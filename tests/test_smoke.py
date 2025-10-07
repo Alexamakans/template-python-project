@@ -1,10 +1,11 @@
-import sys
 import subprocess
+import sys
 
 
 def test_package_imports():
     # Import shouldn't raise
-    import template_python_project  # renamed by ./rename.sh
+    import template_python_project  # noqa
+
     assert hasattr(template_python_project, "__version__")
 
 
@@ -17,6 +18,4 @@ def test_module_runs():
         check=False,
     )
     assert proc.returncode == 0, proc.stderr
-    # keep the assertion generic so renaming is easy
-    assert "Hello from" in proc.stdout
-
+    assert "Hello from template-python-project v" in proc.stdout

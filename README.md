@@ -7,7 +7,7 @@ A tiny Python template that uses **uv** for dependency management and **uv2nix**
 ## Requirements
 
 - **Python ≥ 3.12**
-- **uv** (recommended) — fast package/dependency manager  
+- **uv** (recommended) — fast package/dependency manager
   - Install one of the following ways:
     - `pipx install uv`
     - or `python -m pip install --user uv`

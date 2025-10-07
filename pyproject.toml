@@ -16,4 +16,3 @@ template-python-project = "template_python_project.__main__:main"
 [build-system]
 requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
-

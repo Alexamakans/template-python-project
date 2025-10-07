@@ -1,0 +1,38 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-ast
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      # Ruff lints, with safe autofixes
+      - id: ruff
+        name: ruff (lint)
+        entry: ruff
+        language: system
+        args: ["check", "--fix", "--force-exclude"]
+        types_or: [python, pyi]
+
+      # Ruff formatter (Black-like)
+      - id: ruff-format
+        name: ruff (format)
+        entry: ruff
+        language: system
+        args: ["format"]
+        types_or: [python, pyi]
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest (pre-push)
+        entry: uv run pytest -q
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
