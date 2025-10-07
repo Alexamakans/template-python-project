@@ -1,0 +1,19 @@
+[project]
+name = "template-python-project"
+version = "0.1.0"
+description = "Minimal uv + uv2nix Python template"
+readme = "README.md"
+requires-python = ">=3.12"
+
+# Keep this light for a template; add whatever you like later.
+dependencies = [
+  "requests>=2.32",
+]
+
+[project.scripts]
+template-python-project = "template_python_project.__main__:main"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+

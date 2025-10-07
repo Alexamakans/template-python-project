@@ -1,0 +1,16 @@
+# uv / python
+.venv/
+.uv/
+__pycache__/
+*.pyc
+*.pyo
+.dist-info/
+build/
+dist/
+.eggs/
+
+# nix
+result
+.nix-*
+.direnv/
+
